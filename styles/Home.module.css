@@ -27,5 +27,9 @@
 
 
 .capital{
-  font-size: 9.95px;
+  font-size: 10.10px;
+}
+.info{
+  display: flex;
+  gap: 340px;
 }

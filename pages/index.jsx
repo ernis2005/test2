@@ -7,12 +7,7 @@ import Tabss from "../content/Tabs";
 
 
 export default function Home({ data, children }) {
-  if(!data){
-    return <p>Загрузка ...</p>
-   }
-  if (data.id > 15 ) {
-    data.break
-  }
+  
 
   return (
     <div className={s.container}>
@@ -23,6 +18,11 @@ export default function Home({ data, children }) {
       </Head>
       <div>
         <h1 className={s.h1}>Таблица</h1>
+        <div className={s.info}>
+          <p>name</p>
+          <p>languages</p>
+         
+        </div>
         <header className={s.header}>
           <div className={s.block_1}>
             <div className={s.content}>
