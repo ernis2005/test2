@@ -55,7 +55,7 @@ function Tabs3({ data }) {
           >
             <Tab label="languages" {...a11yProps(0)} />
             <Tab label="subregion" {...a11yProps(1)} />
-            <Tab label="region" {...a11yProps(2)} />
+            <Tab label="numericCode" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -73,7 +73,7 @@ function Tabs3({ data }) {
         <TabPanel value={value} index={2}>
             <div className={s.Tabs_Bloc}>
             {data.map((res) => {
-            return(<div key={res.id}> <p>{res.id}</p><p className={s.capital}>{res.region}</p> <hr /></div>) ;
+            return(<div key={res.id}> <p>{res.id}</p><p className={s.capital}>{res.numericCode}</p> <hr /></div>) ;
           })}
             </div>
          
