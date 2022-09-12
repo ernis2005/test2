@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import s from "../styles/Home.module.css";
-function Tabs2({ data }) {
+function Tabs3({ data }) {
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -46,28 +46,28 @@ function Tabs2({ data }) {
   }
   return (
     <div className={s.Box}>
-              <Box sx={{ width: "100%" }}>
+              <Box sx={{ width: "100%",}}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="capital" {...a11yProps(0)} />
-            <Tab label="population" {...a11yProps(1)} />
+            <Tab label="languages" {...a11yProps(0)} />
+            <Tab label="subregion" {...a11yProps(1)} />
             <Tab label="region" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
           <div className="">
             {data.map((res) => {
-              return (<><p className={s.capital}>{res.capital}</p> <hr /></>);
+              return (<><p className={s.capital}>{res.languages[0].name}</p> <hr /></>);
             })}
           </div>
         </TabPanel>
         <TabPanel value={value} index={1}>
           {data.map((res) => {
-            return(<> <p className={s.capital}>{res.population}</p> <hr /></>);
+            return(<> <p className={s.capital}>{res.subregion}</p> <hr /></>);
           })}
         </TabPanel>
         <TabPanel value={value} index={2}>
@@ -84,4 +84,4 @@ function Tabs2({ data }) {
   );
 }
 
-export default Tabs2;
+export default Tabs3;

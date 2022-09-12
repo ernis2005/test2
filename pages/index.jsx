@@ -4,6 +4,9 @@ import s from "../styles/Home.module.css";
 import axios from "axios";
 import React from 'react'
 import Tabss from "../content/Tabs";
+import Tabs2 from "../content/Tabs";
+import Tabs from "../content/Tabss";
+import Tabs3 from "../content/Tabss";
 
 
 export default function Home({ data, children }) {
@@ -20,7 +23,7 @@ export default function Home({ data, children }) {
         <h1 className={s.h1}>Таблица</h1>
         <div className={s.info}>
           <p>name</p>
-          <p>languages</p>
+         
          
         </div>
         <header className={s.header}>
@@ -32,14 +35,12 @@ export default function Home({ data, children }) {
             </div>
           </div>
           <div>
-            <div className={s.content}>
-              {data.map((res) => {
-                return (<><p className={s.name}>{res.languages[0].name}</p> <hr /></>);
-              })}
-            </div>
+           
+            <Tabs3 data={data}/>
+            
           </div>
           <div className="div">
-       <Tabss data={data}/>
+       <Tabs2 data={data}/>
           </div>
         </header>
       </div>
